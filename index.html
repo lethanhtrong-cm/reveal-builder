@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Slide Builder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="toolbar">
+        <h1>Slide Builder</h1>
+        <div class="actions">
+            <input type="file" id="upload-input" multiple accept=".html" style="display: none;">
+            <button id="btn-upload">Tải file HTML lên</button>
+            <button id="btn-export">Xuất file Reveal.js</button>
+        </div>
+    </header>
+    
+    <div class="app-container">
+        <aside class="sidebar" id="slide-list">
+            <!-- Danh sách thumbnail các slide sẽ render ở đây -->
+        </aside>
+        
+        <main class="editor-area">
+            <div class="tabs">
+                <button id="tab-preview" class="active">Xem trước (Preview)</button>
+                <button id="tab-code">Mã nguồn (Code)</button>
+            </div>
+            
+            <div class="workspace">
+                <div id="preview-container" class="active-view">
+                    <p class="placeholder">Chọn hoặc tải lên một slide để xem</p>
+                </div>
+                <textarea id="code-editor" class="hidden-view"></textarea>
+            </div>
+        </main>
+    </div>
+
+    <!-- Sử dụng type="module" để import các file ES6 -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
