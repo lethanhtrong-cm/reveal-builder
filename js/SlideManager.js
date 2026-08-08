@@ -36,4 +36,14 @@ export class SlideManager {
     getAllSlides() {
         return this.slides;
     }
+
+    // --- Phương thức mới thêm vào ---
+    reorderSlides(fromIndex, toIndex) {
+        // Cắt slide ở vị trí cũ
+        const [movedSlide] = this.slides.splice(fromIndex, 1);
+        // Chèn slide vào vị trí mới
+        this.slides.splice(toIndex, 0, movedSlide);
+        // Cập nhật lại activeSlideIndex để hiển thị đúng slide đang kéo
+        this.activeSlideIndex = toIndex;
+    }
 }
