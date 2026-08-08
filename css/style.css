@@ -21,3 +21,15 @@ body { font-family: sans-serif; height: 100vh; display: flex; flex-direction: co
 
 #code-editor { width: 100%; height: 100%; font-family: monospace; padding: 15px; resize: none; }
 #preview-container { background: white; border: 1px solid #ddd; padding: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); height: 100%; overflow: auto; }
+/* Hiệu ứng khi phần tử đang được kéo */
+.slide-item.dragging {
+    opacity: 0.5;
+    transform: scale(0.98);
+    transition: all 0.2s ease;
+}
+
+/* Hiệu ứng hiển thị vạch chỉ báo vị trí sẽ thả xuống */
+.slide-item.drag-over {
+    border-top: 3px solid #007bff;
+    margin-top: 2px;
+}
